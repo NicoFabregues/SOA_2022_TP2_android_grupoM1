@@ -32,9 +32,6 @@
             android:name=".views.ActivityPrincipal"
             android:exported="true" />
         <activity
-            android:name=".views.EnvioSMSActivity"
-            android:exported="true" />
-        <activity
             android:name=".views.VerificacionCodSMSActivity"
             android:exported="true" />
         <activity
@@ -44,7 +41,7 @@
             android:name=".views.VerificacionUserSignupActivity"
             android:exported="true" />
         <activity
-            android:name=".views.MainActivity"
+            android:name=".views.EnvioSMSActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
