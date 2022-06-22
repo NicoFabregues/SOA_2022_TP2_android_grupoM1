@@ -11,16 +11,9 @@ public class HTTPServiceSignup extends HTTPService{
 
     private static final String class_name = HTTPServiceSignup.class.getSimpleName();
     private static final String ENDPOINT = "/api/api/register";
-    private static final String TIPO_METRICA = "Cant Registros";
-
-    private DatabaseHandler db;
 
     public HTTPServiceSignup() {
         super(class_name);
-    }
-
-    protected void updateOrCreateMetrica() {
-        super.updateOrCreateMetrica(TIPO_METRICA);
     }
 
     @Override
@@ -47,7 +40,6 @@ public class HTTPServiceSignup extends HTTPService{
                 }
                 else {
                     token = response.getString("token");
-                    updateOrCreateMetrica();
                     Intent i = new Intent("com.example.intentservice.intent.action.SIGNUP_RESPONSE");
                     i.putExtra("success", success);
                     i.putExtra("mensaje", "Usuario registrado con éxito");
